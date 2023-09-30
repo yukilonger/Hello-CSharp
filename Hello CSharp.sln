@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMQ_Worker", "ZMQ_Worker\ZM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "IoC\IoC.csproj", "{50A0F9AB-4733-496B-9A99-65AADEFFC42E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntax", "Syntax\Syntax.csproj", "{A6440D5D-A877-4939-8143-0780B1FBDDD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{50A0F9AB-4733-496B-9A99-65AADEFFC42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A0F9AB-4733-496B-9A99-65AADEFFC42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A0F9AB-4733-496B-9A99-65AADEFFC42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6440D5D-A877-4939-8143-0780B1FBDDD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6440D5D-A877-4939-8143-0780B1FBDDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6440D5D-A877-4939-8143-0780B1FBDDD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6440D5D-A877-4939-8143-0780B1FBDDD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
