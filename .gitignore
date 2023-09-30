@@ -1,1 +1,3 @@
 obj/
+Blog/node_modules/*
+.vs/*

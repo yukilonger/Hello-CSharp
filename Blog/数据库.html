@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>
+        ado.net对象：Connection(连接器)、Command(命令)、DataReader(读取器)、DataAdapter(适配器)、DataSet(数据集)、 DataTable(数据表)
+    </p>
+    <p>
+        group by having
+    </p>
+    <p>
+        数据库设计三范式
+        1.字段要有原子性
+        2.每行要有主键，表示每行都是唯一的
+        3.非主键之间不要有依赖广西，只对主键有依赖
+    </p>
+    <p>
+        数据库索引的作用
+        提高查询效率
+    </p>
+    <p>
+        视图：多表联合查询就尽量用
+    </p>
+    <p>
+        复杂查询的缓存
+        数据库连接池:各平台数据库连接插件都具有连接池功能
+        数据库主从表的操作
+    </p>
+    <p>
+        T-sql复制表：
+        只结构
+        select * into b from a
+        带数据
+        insert into b(a, b, c) select d,e,f from a;
+    </p>
+    <p>
+        sql server 2012  oracle 12c
+        分页，每页10条数据，查找第3页
+        select * from  table order by column offset (3-1)*10 rows fetch next 10 rows only
+        mysql
+        select * from table order by id limit (3-1)*10, 10;
+    </p>
+    <p>
+        mysql 默认端口3306 sqlserver默认端口1433 oralce 1520 redis端口6379
+    </p>
+    <p>
+        为什么使用存储过程：
+        1.速度快
+        2.安全 ，反编译看不到具体的sql
+        3.编程简单（代码里写名称、参数即可）、维护方便（上线后该数据库就行）
+    </p>
+    <p>
+        为什么使用触发器：增删改时来维护数据间的约束
+        触发器是由增删改事件触发的，存储过程是需要其他程序调用的
+        存储过程和触发器本质上是一样的，都是要执行一些SQL语句
+    </p>
+    <p>
+        mysql 没有 alter trigger alter procedure
+    </p>
+    <p>
+        select name from student group by name having min(score) > 80 查找那个人，他的最小成绩大于80
+    </p>
+    <p>
+        当条件中有聚合函数时不能用where而用having
+        sql聚合函数：count、avg、sum、max、min
+    </p>
+    <p>
+        3. redis特点：
+        2) 没有复杂的结构，数据存放在内存中，存取数据快，适合做缓存工具使用
+        3）支持的类型：字符串、哈希、列表、集合，这几种类型怎么用
+    </p>
+    <p>
+        4. 事务（Transaction）
+        按顺序执行的一系列操作，想要做到只要其中有一个不成功就回滚之前的就可以用事物
+    </p>
+    <p>
+        数据库优化：
+        （1）Where 子句中：where 表之间的连接必须写在其他 Where 条件之前，那些可以过滤掉最大数量记录的条件必须写在 Where 子句的末尾.HAVING 最后。
+        （2）用 EXISTS 替代 IN、用 NOT EXISTS 替代 NOT IN。
+        （3） 避免在索引列上使用计算
+        （4）避免在索引列上使用 IS NULL 和 IS NOT NULL
+        （5）对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。
+        （6）应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描
+        （7）应尽量避免在 where 子句中对字段进行表达式操作，这将导致引擎放弃使用索引而进行全表扫描
+    </p>
+</body>
+</html>

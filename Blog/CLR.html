@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>CLR Common Language Runtime 公共语言运行库</li>
+        <li>CLI Common Language Infrastructure 公共语言基础结构</li>
+        <li>CTS Common Type System 通用类型系统</li>
+        <li>CLS 通用语言规范 Common Language Specification</li>
+        <li>CIL Common Intermediate Language 通用中间语言</li>
+        <li>JIT Just In Time Compiler 即时编译器</li>
+    </ul>
+    <p>CLR包含CLI、CTS、CLS</p>
+    <p>C#等代码编译为CIL，再由JIT编译为机器语言</p>
+    <p>
+        非托管资源是指CLR无法确定何时要回收的资源，比如用户打开文件、连接数据库，绘图等，需用户自行回收，也可继承接口IDisposable来释放资源
+        析构函数中只能释放非托管资源
+    </p>
+</body>
+</html>

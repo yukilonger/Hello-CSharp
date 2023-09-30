@@ -1,0 +1,72 @@
+﻿import React from 'react';
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Menu } from 'antd';
+
+type MenuItem = Required<MenuProps>['items'][number];
+
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  icon?: React.ReactNode,
+  children?: MenuItem[],
+  type?: 'group',
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    type,
+  } as MenuItem;
+}
+
+const items: MenuProps['items'] = [
+  getItem('CLR', '1'),
+  getItem('数据类型', '2'),
+  getItem('修饰符', '3'),
+  getItem('内存', '4'),
+  getItem('线程和锁', '5'),
+  getItem('类和接口', '6'),
+  getItem('委托', '7'),
+  getItem('Socket', '8'),
+  getItem('IoC', '9'),
+  getItem('编码', '10'),
+  getItem('ORM', '11'),
+  getItem('设计模式', '12'),
+  getItem('算法', '13'),
+  getItem('数据库', '14'),
+  getItem('Json', '15'),
+  getItem('负载均衡', '16'),
+  getItem('微服务', '17'),
+  getItem('其他', '18'),
+  getItem('WPF', '19', null, [
+    getItem('MVVM', '1901'),
+    getItem('布局', '1902', null, [
+        getItem('StackPanel', '190201'),
+        getItem('WrapPanel', '190202'),
+        getItem('DockPanel', '190203'),
+        getItem('Grid', '190204'),
+        getItem('Canvas', '190205'),
+    ])
+  ])
+];
+
+const App: React.FC = () => {
+  const onClick: MenuProps['onClick'] = (e) => {
+    console.log('click ', e);
+  };
+
+  return (
+    <Menu
+      onClick={onClick}
+      style={{ width: 256 }}
+      defaultSelectedKeys={['1']}
+      defaultOpenKeys={['sub1']}
+      mode="inline"
+      items={items}
+    />
+  );
+};
+
+export default App;
