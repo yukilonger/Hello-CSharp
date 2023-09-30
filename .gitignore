@@ -4,3 +4,4 @@ Blog/node_modules/*
 Algorithm/bin/*
 ZMQ_Client/bin/*
 ZMQ_Server/bin/*
+Utility/bin/*
